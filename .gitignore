@@ -1,0 +1,6 @@
+__pycache__
+
+data/fft_data
+data/npy_data
+
+work_dir

@@ -1,0 +1,30 @@
+work_dir: ./work_dir/modal
+
+# feeder
+feeder: feeder.Feeder_modal
+train_feeder_args:
+  data_path: ./data/fft_data/train/data.npy
+test_feeder_args:
+  data_path: ./data/fft_data/valid/data.npy
+
+# model
+model: net.CNN
+model_args:
+  channels: 9
+  num_classes: 4
+
+#optim
+optimizer: 'Adam'
+weight_decay: 1e-5
+base_lr: 1e-3
+step: [10, 50]
+
+# training
+device: 0
+batch_size: 128
+test_batch_size: 128
+num_epoch: 80
+nesterov: True
+
+
+
