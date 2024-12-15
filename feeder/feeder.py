@@ -39,7 +39,8 @@ class Feeder_label(torch.utils.data.Dataset):
         self.load_data()
     
     def load_data(self):
-        self.data = np.load(self.data_path)[self.modal].transpose(1,0,2)
+        data = np.load(self.data_path, mmap_mode='r')[self.modal].transpose(1,0,2)
+        self.data = data.copy()
         self.label = np.load(self.label_path)
         
     def __len__(self):

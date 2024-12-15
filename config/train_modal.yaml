@@ -3,7 +3,7 @@ work_dir: ./work_dir/modal
 # feeder
 feeder: feeder.Feeder_modal
 train_feeder_args:
-  data_path: ./data/fft_data/train/data.npy
+  data_path: ./data/fft_data/valid/data.npy
 test_feeder_args:
   data_path: ./data/fft_data/valid/data.npy
 
@@ -15,8 +15,8 @@ model_args:
 
 #optim
 optimizer: 'Adam'
-weight_decay: 1e-5
-base_lr: 1e-3
+weight_decay: 1e-4
+base_lr: 1e-2
 step: [10, 50]
 
 # training
